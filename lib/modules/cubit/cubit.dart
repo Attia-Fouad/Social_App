@@ -596,9 +596,9 @@ class SocialCubit extends Cubit<SocialStates> {
     {
       for (var element in value.docs) {
         myPosts.add(PostModel.fromJson(element.data()));
+        emit(SocialGetPostsSuccessState());
       }
 
-      emit(SocialGetPostsSuccessState());
     })
         .catchError((error){
       emit(SocialGetPostsErrorState(error.toString()));

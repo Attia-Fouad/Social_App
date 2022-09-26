@@ -463,7 +463,7 @@ class ProfileScreen extends StatelessWidget {
                   separatorBuilder: (context, index) => const SizedBox(
                     height: 8.0,
                   ),
-                  itemCount: cubit.posts.length,
+                  itemCount: cubit.myPosts.length,
                 ),
                 fallbackBuilder: (BuildContext context) =>  Center(child: Text('No Posts Yet, \nShare some Posts.',
                 style: TextStyle(
